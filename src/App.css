@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+:root {
+    --primary-color: #0880FF;
+    --secundary-color: #404040;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 300;
+    src: url('./Assets/fonts/Quicksand-Light.ttf');
+    font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 500;
+    src: url('./Assets/fonts/Quicksand-Regular.ttf');
+    font-display: swap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 700;
+    src: url('./Assets/fonts/Quicksand-Bold.ttf');
+    font-display: swap;
 }
 
-.App-link {
-  color: #61dafb;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 4.8em;
+}
+
+h2 {
+    font-size: 3.2em;
+}
+
+h3 {
+    font-size: 2.8em;
+}
+
+h4 {
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.6em;
+    border: 3px solid var(--secundary-color);
+    border-radius: 5px;
+    transition: .3s;
+    outline: none;
+}
+input::placeholder {
+    color: inherit;
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.pt-10, .py-10 {
+    padding-top: 10px;
+}
+
+.pb-10, .py-10 {
+    padding-bottom: 10px;
+}
+
+.pt-20, .py-20 {
+    padding-top: 20px;
+}
+
+.pb-20, .py-20 {
+    padding-bottom: 20px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.d-flex, #root {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.content-1280 {
+    max-width: 1320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.active {
+    background-color: #0880FF;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bkg-gray {
+    background-color: #404040;
+}
+
+.bkg-light-gray {
+    background-color: #F0F0F0;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover, .btn:focus {
+    transform: translateY(-2px);
+    background-color: #00A7FF;
+}
+
+#root {
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.container > .d-grid {
+    grid-template-columns: 1fr 350px;
+    gap: 24px;
+}
+
+.category {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: var(--primary-color);
+}
+
+.fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
 }

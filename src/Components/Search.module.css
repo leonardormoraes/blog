@@ -1,0 +1,57 @@
+.btn {
+    border-radius: 0 10px 10px 0;
+}
+
+.btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.search {
+    border-radius: 10px 0 0 10px;
+}
+
+.posts {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.posts h3 {
+    font-size: 1.8em;
+    margin-bottom: 14px;
+}
+
+.posts a {
+    margin-top: 10px;
+    border: 1px solid #C4C4C4;
+    border-right: none;
+    border-left: none;
+    padding: 10px 0;
+}
+
+.posts a > div:first-child {
+    position: relative;
+    display: block;
+    min-width: 70px;
+    min-height: 70px;
+    margin-right: 10px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+}
+
+.posts a p {
+    margin-top: 10px;
+}
+
+.posts a p::before {
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    background-image: url('../Assets/images/ico/ico-clock.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
