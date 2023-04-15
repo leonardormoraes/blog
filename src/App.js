@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>
             <Header />
                 <main className="container">
-                    {/* <Feature /> */}
+                    <Feature />
                     <div className="content-1280 d-grid">
                         <Routes>
                             <Route path='/' element={<Home />} />

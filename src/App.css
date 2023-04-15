@@ -197,12 +197,12 @@ main {
 
 .container {
     width: 100%;
-    padding-top: 20px;
 }
 
 .container > .d-grid {
     grid-template-columns: 1fr 350px;
     gap: 24px;
+    padding-top: 20px;
 }
 
 .category {
