@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './Components/Header';
@@ -9,8 +10,24 @@ import Feature from './Components/Features/Feature';
 import Loading from './Components/Helper/Loading';
 
 function App() {
+    const [loading, setLoading] = React.useState(true);
+
+    React.useEffect(() => {
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('body').style.overflow = 'auto';
+    
+                setLoading(false);
+            }, 1000);
+        });
+
+        
+    }, [loading]);
+    
     return (
         <BrowserRouter>
+            {loading && <Loading />}
             <Header />
                 <main className="container">
                     <Feature />
@@ -20,7 +37,9 @@ function App() {
                             <Route path='*' element={<NotFound />} />
                         </Routes>
 
-                        <Search />
+                        <section>
+                            <Search />
+                        </section>
                     </div>
                 </main>
             <Footer />

@@ -50,7 +50,7 @@ input, textarea {
 }
 
 h1 {
-    font-size: 4.8em;
+    font-size: 4.2em;
 }
 
 h2 {
@@ -116,6 +116,10 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     margin-top: 24px;
 }
 
+.mb-24 {
+    margin-bottom: 24px;
+}
+
 .d-flex, #root {
     display: flex;
 }
@@ -136,8 +140,16 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     justify-content: center;
 }
 
-.absolute {
+.pos-absolute {
     position: absolute;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-sticky {
+    position: sticky;
 }
 
 .content-1280 {
@@ -203,25 +215,43 @@ main {
     grid-template-columns: 1fr 350px;
     gap: 24px;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .category {
     padding: 5px 10px;
-    border-radius: 5px;
     font-size: 2em;
     font-weight: bold;
-    background-color: var(--primary-color);
 }
 
 .fadeIn {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeIn .3s forwards;
+    animation: initialTransform .3s forwards;
 }
 
-@keyframes fadeIn {
+.animeLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: initialTransform .3s forwards;
+}
+
+@keyframes initialTransform {
     to {
         opacity: 1;
         transform: initial;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.8em;
+    }
+    p {
+        font-size: 1.6em;
+    }
+    .container > .d-grid {
+        display: flex;
+        flex-wrap: wrap-reverse;
     }
 }

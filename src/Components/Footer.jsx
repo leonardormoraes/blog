@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className='bkg-gray py-10'>
             <div className="content-1280">
-                <h3 className='text-center color-white'>&copy; CopyRight - {dateTime}</h3>
+                <h4 className='text-center color-white'>&copy; CopyRight - {dateTime}</h4>
             </div>
         </footer>
     )

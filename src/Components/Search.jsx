@@ -12,7 +12,7 @@ const Search = () => {
     }
 
     return (
-        <div>
+        <div className={`${styles.containerSearch} pos-sticky`}>
             <form onSubmit={handleSubmit}>
                 <div className="d-flex">
                     <Input type="text" name="search" id="search" value={search} onChange={(({target}) => setSearch(target.value))} className={`${styles.search} bkg-gray color-white`} placeholder="Pesquise por assunto, data..." aria-label="Busca" autoComplete="off" />
