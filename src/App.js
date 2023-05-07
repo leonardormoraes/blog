@@ -8,6 +8,7 @@ import NotFound from './Components/NotFound';
 import Search from './Components/Search';
 import Feature from './Components/Features/Feature';
 import Loading from './Components/Helper/Loading';
+import Post from './Components/Posts/Post';
 
 function App() {
     const [loading, setLoading] = React.useState(true);
@@ -34,6 +35,7 @@ function App() {
                     <div className="content-1280 d-grid">
                         <Routes>
                             <Route path='/' element={<Home />} />
+                            <Route path='/posts/*' element={<Post />} />
                             <Route path='*' element={<NotFound />} />
                         </Routes>
 

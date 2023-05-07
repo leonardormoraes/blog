@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Veja o horóscopo do dia!",
+        "desc": "Confira o que os astros tem a dizer para o seu signo hoje.",
+        "img": "bkg-horoscopo.png",
+        "content": "Aqui virá o conteúdo post, sendo textos, imagens e afins, tudo o que possa construir um artigo, porém ainda preciso saber como armazenar isso da maneira correta no banco, pra não gerar carga desnecessária.",
+        "permalink": "veja-o-horoscopo-do-dia",
+        "cat": {"link": "/posts/horoscopo", "type": "Horóscopo"}
+    },
+    {
+        "id": 2,
+        "title": "Windows: consultar memória RAM",
+        "desc": "Saiba como consultar a memória RAM disponível no seu computador.",
+        "img": "bkg-computador.png",
+        "content": "Aqui virá o conteúdo post, sendo textos, imagens e afins, tudo o que possa construir um artigo, porém ainda preciso saber como armazenar isso da maneira correta no banco, pra não gerar carga desnecessária.",
+        "permalink": "windows-consultar-memoria-ram",
+        "cat": {"link": "horoscopo", "type": "Tecnologia"}
+    }
+]

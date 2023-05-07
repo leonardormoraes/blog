@@ -116,6 +116,10 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     margin-top: 24px;
 }
 
+.mb-10 {
+    margin-bottom: 10px;
+}
+
 .mb-24 {
     margin-bottom: 24px;
 }
@@ -222,6 +226,10 @@ main {
     padding: 5px 10px;
     font-size: 2em;
     font-weight: bold;
+}
+
+.breadcrumb a {
+    font-size: 1.6em;
 }
 
 .fadeIn {

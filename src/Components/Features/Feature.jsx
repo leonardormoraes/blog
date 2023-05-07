@@ -16,7 +16,15 @@ import Img3 from '../../Assets/images/bkg/bkg-computador.png'
 const Feature = () => {
 
     return (
-        <Swiper className={styles.carousel} navigation={true} modules={[Navigation]} loop={true}>
+        <Swiper
+            className={styles.carousel}
+            modules={[Navigation]}
+            navigation={true}
+            loop={true}
+            grabCursor={true}
+            pagination={{
+                clickable: true,
+            }}>
             <SwiperSlide><img src={Img1} alt="" /></SwiperSlide>
             <SwiperSlide><img src={Img2} alt="" /></SwiperSlide>
             <SwiperSlide><img src={Img3} alt="" /></SwiperSlide>
