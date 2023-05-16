@@ -1,18 +1,23 @@
 import React from 'react'
-import Head from './Head'
-import { API_URL } from '../api'
-import styles from './PageHome.module.css'
+import Head from '../Head'
+import { API_URL, GET_POSTS } from '../../api'
+import styles from './Home.module.css'
 
 const Home = () => {
-    const host = API_URL;
     const [posts, setPosts] = React.useState(null);
 
     React.useEffect(() => {
 
         (async function getPost() {
-            const response = await fetch(`${API_URL}/JSON/Posts.json`);
-            const json = await response.json();
-            setPosts(json);
+            try {
+                const { url, options } = GET_POSTS();
+                const response = await fetch(url, options);
+                const json = await response.json();
+                console.log(json);
+                setPosts(json);
+            } catch(err) {
+                console.log('err');
+            }
         })();
 
     }, []);
@@ -25,14 +30,14 @@ const Home = () => {
             <ul>
                 {posts.map((post) => (
                     <li key={post.id} className='pos-relative mb-24'>
-                        <a href={`${host}/posts/${post.permalink}`} className={`${styles.item} pos-relative`}>
+                        <a href={`/posts/${post.permalink}`} className={`${styles.item} pos-relative`}>
                             <img src={`/images/cap/${post.img}`} alt={post.title} className='pos-absolute' />
                             <div className={`${styles.desc} color-white`}>
                                 <h1>{post.title}</h1>
                                 <p>{post.desc}</p>
                             </div>
                         </a>
-                        <a href={`${host}/${post.cat.link}`} className={`${styles.category} btn category pos-absolute uppercase`} aria-label={`Matérias sobre ${post.cat.type}`}>{post.cat.type}</a>
+                        <a href={`/${post.cat}`} className={`${styles.category} btn category pos-absolute uppercase`} aria-label={`Matérias sobre ${post.type}`}>{post.type}</a>
                     </li>
                 ))}
             </ul>

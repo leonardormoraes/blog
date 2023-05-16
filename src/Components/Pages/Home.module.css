@@ -42,6 +42,10 @@
     z-index: 1;
 }
 
+.desc p {
+    width: 83%;
+}
+
 .category {
     bottom: 20px;
     right: 20px;

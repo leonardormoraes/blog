@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "author": "Leonardo",
         "title": "Veja o horóscopo do dia!",
         "desc": "Confira o que os astros tem a dizer para o seu signo hoje.",
         "img": "bkg-horoscopo.png",
@@ -10,11 +11,22 @@
     },
     {
         "id": 2,
+        "author": "Leonardo",
         "title": "Windows: consultar memória RAM",
         "desc": "Saiba como consultar a memória RAM disponível no seu computador.",
         "img": "bkg-computador.png",
         "content": "Aqui virá o conteúdo post, sendo textos, imagens e afins, tudo o que possa construir um artigo, porém ainda preciso saber como armazenar isso da maneira correta no banco, pra não gerar carga desnecessária.",
         "permalink": "windows-consultar-memoria-ram",
-        "cat": {"link": "horoscopo", "type": "Tecnologia"}
+        "cat": {"link": "/posts/tecnologia", "type": "Tecnologia"}
+    },
+    {
+        "id": 3,
+        "author": "Leonardo",
+        "title": "Os 10 lugares mais lindos do mundo",
+        "desc": "Do Pantanal às Maldivas, de Veneza à Antártica, o que existe de mais espetacular, mais fantástico, mais maravilhoso no planeta (em fotos).",
+        "img": "bkg-europa.png",
+        "content": "Aqui virá o conteúdo post, sendo textos, imagens e afins, tudo o que possa construir um artigo, porém ainda preciso saber como armazenar isso da maneira correta no banco, pra não gerar carga desnecessária.",
+        "permalink": "windows-consultar-memoria-ram",
+        "cat": {"link": "/posts/horoscopo", "type": "Tecnologia"}
     }
 ]
